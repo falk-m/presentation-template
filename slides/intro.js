@@ -1,5 +1,5 @@
-import { html } from "htm/preact";
-import { Slide } from "../slides.js";
+import { html } from "../src/html.js";
+import { Slide } from "../src/slide.js";
 
 export default function () {
   return html`<${Slide}>

@@ -10,12 +10,12 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="vendor/revealjs/dist/reset.css" />
-    <link rel="stylesheet" href="vendor/revealjs/dist/reveal.css" />
-    <link rel="stylesheet" href="vendor/revealjs/dist/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reset.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/black.css" id="theme" />
 
     <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="vendor/revealjs/plugin/highlight/monokai.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/highlight/monokai.css" />
 
     <script type="importmap">
       {
@@ -23,12 +23,13 @@
           "preact": "https://esm.sh/preact@10.23.1",
           "htm/preact": "https://esm.sh/htm@3.1.1/preact?external=preact",
           "preact/hooks": "https://esm.sh/preact@10.23.1/hooks",
-          "revealjs" : "./vendor/revealjs/dist/reveal.esm.js",
-          "revealjs/plugin/markdown": "./vendor/revealjs/plugin/markdown/markdown.esm.js",
-          "revealjs/plugin/zoom": "./vendor/revealjs/plugin/zoom/zoom.esm.js",
-          "revealjs/plugin/notes": "./vendor/revealjs/plugin/notes/notes.esm.js",
-          "revealjs/plugin/search": "./vendor/revealjs/plugin/search/search.esm.js",
-          "revealjs/plugin/highlight": "./vendor/revealjs/plugin/highlight/highlight.esm.js"
+          "htm": "https://esm.sh/htm",
+          "revealjs" : "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.esm.js",
+          "revealjs/plugin/markdown": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/markdown/markdown.esm.js",
+          "revealjs/plugin/zoom": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/zoom/zoom.esm.js",
+          "revealjs/plugin/notes": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/notes/notes.esm.js",
+          "revealjs/plugin/search": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/search/search.esm.js",
+          "revealjs/plugin/highlight": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/highlight/highlight.esm.js"
         }
       }
     </script>
@@ -36,7 +37,7 @@
   <body>
     <script type="module">
       import { render } from "preact";
-      import { html } from "htm/preact";
+      import { html } from "./src/html.js";
       import App from "./app.js"
 
       render(html`<${App} />`, document.body);

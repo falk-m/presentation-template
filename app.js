@@ -1,7 +1,7 @@
-import { html } from "htm/preact";
+import { html } from "./src/html.js";
 import { useRef } from "preact/hooks";
 import { Slides } from "./slides.js";
-import useRevealJS from "./hooks/useRevealjs.js";
+import useRevealJS from "./src/useRevealjs.js";
 
 export default function () {
   const deckDivRef = useRef(null);
