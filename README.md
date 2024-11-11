@@ -51,7 +51,9 @@ And here we use it without compiling step.
 The browser can import Es Module js files only over http/https.
 
 You can use the php build in webserver e.g.    
-```php -S localhost:8000```
+```php -S localhost:8000```    
+or the node webserver    
+```npx http-server```
 
 
 ## styles and transitions
