@@ -1,0 +1,42 @@
+
+.slide-background.animation-gradient.present {
+  background: linear-gradient(-45deg, #1e5799, #2ce0bf, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.slide-background.animation-rainbow.present {
+  background: linear-gradient(
+    to right,
+    #1e5799 0%,
+    #41e7c9 19%,
+    #76dd2c 40%,
+    #dba62b 60%,
+    #e02cbf 83%,
+    #1e5799 100%
+  );
+  background-size: 500% 100%;
+  animation: horizontal 120s linear infinite;
+}
+
+@keyframes horizontal {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 500%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -1,10 +1,21 @@
 import { html } from "./html.js";
 
-export const backgrounds = {
+export const backgroundGradients = {
   linearGreen: 'linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%)',
   linearBlue: 'linear-gradient(to top, rgb(9, 32, 63) 0%, rgb(83, 120, 149) 100%)',
   linearPurple: 'linear-gradient(-20deg, #2b5876 0%, #4e4376 100%)',
   linearBlack: 'radial-gradient(circle at 10% 20%, rgb(69, 86, 102) 0%, rgb(34, 34, 34) 90%)',
+}
+
+export const backgroundClasses = {
+  animationGradient: 'animation-gradient',
+  animationRainbow: 'animation-rainbow'
+}
+
+export const backgroundColors = {
+  green: '#23d5ab',
+  darkBlue: '#1e5799',
+  lightBlue: '#23a6d5',
 }
 
 export const slideTransition = {

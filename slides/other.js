@@ -1,10 +1,10 @@
 import { html } from "../src/html.js";
-import { backgrounds, Slide, slideTransition } from "../src/slide.js";
+import { backgroundGradients, Slide, slideTransition } from "../src/slide.js";
 
 export default function () {
   return html`<${Slide}
     data-transition=${slideTransition.CONVEX}
-    data-background-gradient=${backgrounds.linearGreen} >
+    data-background-gradient=${backgroundGradients.linearGreen} >
     Slide 1
   <//>`;
 }
