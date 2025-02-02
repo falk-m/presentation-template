@@ -2,48 +2,99 @@
   <head>
     <meta charset="utf-8" />
 
-    <title>reveal.js, preact demo slides</title>
+    <title>Presentation</title>
 
-    <meta name="description" content="presentation demo slides" />
-    <meta name="author" content="Hfalk-m.de" />
+    <meta name="author" content="falk-m.de" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reset.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="revealjs@5.1.0/dist/reset.css" />
+    <link rel="stylesheet" href="revealjs@5.1.0/dist/reveal.css" />
+    <link rel="stylesheet" href="revealjs@5.1.0/dist/theme/black.css" />
 
     <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/highlight/monokai.css" />
+    <link rel="stylesheet" href="assets/hljs-theme.css" />
+    <link rel="stylesheet" href="assets/custom-theme-overrides.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
 
+        <section class="bg-title">
+          <h1>Title</h1>
+        </section>
 
-    <link rel="stylesheet" href="src/animations.css" />
+        <section>
+          standard bg
+        </section>
+
+        <section class="bg-grid">
+          bg-grid
+        </section>
+
+        <section class="bg2">
+          BG2
+        </section>
+
+        <section>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+         </section>
+
+         <section>
+          <pre data-id="code-animation"><code class="hljs css" data-trim>
+            .foo { color: #000000; }
+            .foo .bar { color: #fd2020; }
+            .foo .bar > .baz { color: #ffffff; }
+          </code></pre>
+         </section>
+
+        <section class="bg-title">
+          <h1>Thanks</h1>
+          <a href="?print-pdf">print view</a>
+        </section>
+      </div>
+    </div>
 
     <script type="importmap">
       {
         "imports": {
-          "preact": "https://esm.sh/preact@10.23.1",
-          "htm/preact": "https://esm.sh/htm@3.1.1/preact?external=preact",
-          "preact/hooks": "https://esm.sh/preact@10.23.1/hooks",
-          "htm": "https://esm.sh/htm",
-          "revealjs" : "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.esm.js",
-          "revealjs/plugin/markdown": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/markdown/markdown.esm.js",
-          "revealjs/plugin/zoom": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/zoom/zoom.esm.js",
-          "revealjs/plugin/notes": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/notes/notes.esm.js",
-          "revealjs/plugin/search": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/search/search.esm.js",
-          "revealjs/plugin/highlight": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/highlight/highlight.esm.js"
+          "revealjs": "./revealjs@5.1.0/dist/reveal.esm.js",
+          "revealjs/plugin/markdown": "./revealjs@5.1.0/plugin/markdown/markdown.esm.js",
+          "revealjs/plugin/zoom": "./revealjs@5.1.0/plugin/zoom/zoom.esm.js",
+          "revealjs/plugin/notes": "./revealjs@5.1.0/plugin/notes/notes.esm.js",
+          "revealjs/plugin/search": "./revealjs@5.1.0/plugin/search/search.esm.js",
+          "revealjs/plugin/highlight": "./revealjs@5.1.0/plugin/highlight/highlight.esm.js"
         }
       }
     </script>
-  </head>
-  <body>
-    <script type="module">
-      import { render } from "preact";
-      import { html } from "./src/html.js";
-      import App from "./app.js"
 
-      render(html`<${App} />`, document.body);
+    <script type="module">
+      import Reveal from "revealjs";
+      import RevealMarkdown from "revealjs/plugin/markdown";
+      import RevealZoom from "revealjs/plugin/zoom";
+      import RevealNotes from "revealjs/plugin/notes";
+      import RevealSearch from "revealjs/plugin/search";
+      import RevealHighlight from "revealjs/plugin/highlight";
+
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+        transition: 'slide',
+        backgroundTransition: 'slide',
+        plugins: [
+          RevealZoom,
+          RevealNotes,
+          RevealSearch,
+          RevealMarkdown,
+          RevealHighlight,
+        ],
+      });
     </script>
   </body>
 </html>

@@ -1,11 +1,11 @@
 
-.slide-background.animation-gradient.present {
+.slide-background.animation-gradient.present .slide-background-content{
   background: linear-gradient(-45deg, #1e5799, #2ce0bf, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }
 
-.slide-background.animation-rainbow.present {
+.slide-background.animation-rainbow.present .slide-background-content{
   background: linear-gradient(
     to right,
     #1e5799 0%,
