@@ -12,9 +12,8 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="revealjs@5.1.0/dist/reset.css" />
-    <link rel="stylesheet" href="revealjs@5.1.0/dist/reveal.css" />
-    <link rel="stylesheet" href="revealjs@5.1.0/dist/theme/black.css" />
+    <link rel="stylesheet" href="./revealjs/dist/revealjs.css" />
+    <link rel="stylesheet" href="./revealjs/dist/theme-black.css" />
 
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="assets/hljs-theme.css" />
@@ -23,34 +22,43 @@
   <body>
     <div class="reveal">
       <div class="slides">
-
         <section class="bg-title">
           <h1>Title</h1>
         </section>
 
         <section>
-          standard bg
+          <p>standard bg</p>
         </section>
 
         <section class="bg-grid">
-          bg-grid
+          <p>bg-grid</p>
         </section>
 
         <section class="bg2">
-          BG2
+          <p>BG2</p>
         </section>
 
         <section>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-         </section>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+        </section>
 
-         <section>
+        <section>
           <pre data-id="code-animation"><code class="hljs css" data-trim>
             .foo { color: #000000; }
             .foo .bar { color: #fd2020; }
             .foo .bar > .baz { color: #ffffff; }
           </code></pre>
-         </section>
+        </section>
 
         <section class="bg-title">
           <h1>Thanks</h1>
@@ -59,34 +67,17 @@
       </div>
     </div>
 
-    <script type="importmap">
-      {
-        "imports": {
-          "revealjs": "./revealjs@5.1.0/dist/reveal.esm.js",
-          "revealjs/plugin/markdown": "./revealjs@5.1.0/plugin/markdown/markdown.esm.js",
-          "revealjs/plugin/zoom": "./revealjs@5.1.0/plugin/zoom/zoom.esm.js",
-          "revealjs/plugin/notes": "./revealjs@5.1.0/plugin/notes/notes.esm.js",
-          "revealjs/plugin/search": "./revealjs@5.1.0/plugin/search/search.esm.js",
-          "revealjs/plugin/highlight": "./revealjs@5.1.0/plugin/highlight/highlight.esm.js"
-        }
-      }
-    </script>
+    <script src="./revealjs/dist/revealjs.js"></script>
 
     <script type="module">
-      import Reveal from "revealjs";
-      import RevealMarkdown from "revealjs/plugin/markdown";
-      import RevealZoom from "revealjs/plugin/zoom";
-      import RevealNotes from "revealjs/plugin/notes";
-      import RevealSearch from "revealjs/plugin/search";
-      import RevealHighlight from "revealjs/plugin/highlight";
 
       Reveal.initialize({
         controls: true,
         progress: true,
         center: true,
         hash: true,
-        transition: 'slide',
-        backgroundTransition: 'slide',
+        transition: "slide",
+        backgroundTransition: "slide",
         plugins: [
           RevealZoom,
           RevealNotes,

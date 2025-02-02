@@ -1,0 +1,13 @@
+{
+  "name": "revealjs-template",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node ./esbuild.config.mjs --watch",
+    "build": "node ./esbuild.config.mjs"
+  },
+  "dependencies": {
+    "esbuild": "0.24.x",
+    "reveal.js": "5.1.x",
+    "esbuild-sass-plugin": "3.3.x"
+  }
+}
